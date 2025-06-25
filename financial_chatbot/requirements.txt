@@ -1,0 +1,18 @@
+streamlit
+python-dotenv
+openai
+pandas
+requests
+PyPDF2
+transformers
+sentencepiece  # Required for some HuggingFace models
+yfinance
+llama-index
+faiss-cpu  # For local vector database
+PyMuPDF
+langchain
+newspaper3k
+lxml[html_clean] 
+sentence-transformers
+fastapi
+uvicorn

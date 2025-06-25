@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial ChatBot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h1>💹 Financial ChatBot</h1>
+      <p>
+        Conversational financial assistant:<br>
+        <ul>
+          <li>Ask about stocks, news, filings, and more</li>
+          <li>Upload and analyze financial reports (PDF)</li>
+          <li>Powered by LLMs and real-time data</li>
+        </ul>
+      </p>
+      <a href="#" target="_blank">View on GitHub</a>
+    </aside>
+    <main class="main-content">
+      <nav class="tabs">
+        <button class="tab active" data-tab="chat">💬 Chat</button>
+        <button class="tab" data-tab="document">📄 Document Analysis</button>
+      </nav>
+      <section id="chat-section" class="tab-content active">
+        <div id="chat-history" class="chat-history"></div>
+        <form id="chat-form" class="chat-form">
+          <input type="text" id="chat-input" placeholder="Ask a financial question (e.g., TSLA stock price)" autocomplete="off" required>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+      <section id="document-section" class="tab-content">
+        <form id="upload-form" class="upload-form">
+          <label for="pdf-upload">Upload a financial report (PDF):</label>
+          <input type="file" id="pdf-upload" accept="application/pdf" required>
+          <button type="submit">Upload</button>
+        </form>
+        <div id="report-summary" class="report-summary"></div>
+        <form id="report-query-form" class="report-query-form" style="display:none;">
+          <input type="text" id="report-query-input" placeholder="Ask something from this report" autocomplete="off" required>
+          <button type="submit">Ask</button>
+        </form>
+        <div id="report-answer" class="report-answer"></div>
+      </section>
+    </main>
+  </div>
+  <div id="loading" class="loading" style="display:none;">Loading...</div>
+  <script src="app.js"></script>
+</body>
+</html> 
